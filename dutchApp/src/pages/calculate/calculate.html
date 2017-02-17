@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>DutchPay</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+   <h1><ion-icon name="calculator">Calculator</ion-icon></h1>
+    <div class="price_content">
+        <span class="price">4,800</span> <ion-img src='img/korea_won.jpg' width="20"></ion-img>
+    </div>
+    <ion-list>
+      <ion-list-header>
+        Using content
+      </ion-list-header>
+      <div class="using_container">
+        <ion-checkbox [(ngModel)]="aaa" checked="true"></ion-checkbox>
+        <span class="using_content">GS25 Snack</span>
+        <span> : </span>
+        <span class="using_price">1,200</span>
+        <br/>
+        <ion-checkbox [(ngModel)]="bbb"></ion-checkbox>
+        <span class="using_content">GS25 Kakao Choco</span>
+        <span> : </span>
+        <span class="using_price">3,600</span>
+      </div>
+    </ion-list>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+      <button ion-button round (click)='openPrompt()'><ion-icon name="add"></ion-icon></button>
+      <button ion-button round><ion-icon name="remove"></ion-icon></button>
+      <button ion-button round color="secondary">Save</button>
+      <button ion-button round color="danger">Reset</button>
+    </ion-toolbar>
+</ion-footer>

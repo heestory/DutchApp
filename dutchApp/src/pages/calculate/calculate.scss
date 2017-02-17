@@ -1,0 +1,33 @@
+page-calculate {
+  h1{
+    text-align: center;
+    color:#51a7e8;
+    border-bottom:  1px solid black;
+    padding : 15px;
+  }
+  .price_content{
+    text-align: center;
+    margin : 50px 0px;
+  }
+  .price_content .price_won{
+
+  }
+  .price_content .price{
+    font-size : 40px;
+  }
+
+  .using_container{
+    padding-left: 20px;
+  }
+
+  .using_container .using_price{
+    color : red;
+  }
+
+  ion-toolbar{
+    text-align : center;
+  }
+
+
+}
+

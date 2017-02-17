@@ -1,0 +1,30 @@
+meeting-name{
+  //title
+  h1{
+    text-align: center;
+    text-shadow : 3px 3px grey;
+    color:black;
+    padding : 25px;
+    font-weight: 900;
+  }
+
+  //Describe groupname
+  .group_name{
+    margin-top : 90px;
+  }
+
+  div{
+    text-align: center;
+  }
+
+  .button{
+    margin-top : 60px;
+  }
+  .background{
+    background-image: url('../../img/meetings.gif');
+    background-repeat:no-repeat;
+    background-size: 400px 600px;
+    background-position: bottom;
+  }
+
+}
