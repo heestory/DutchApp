@@ -4,11 +4,11 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-import { ListPage } from '../pages/list/list';
-import {CalculatePage} from '../pages/calculate/calculate';
+
+
 import {PhoneBookPage} from '../pages/phone-book/phone-book';
 import {MeetingNamePage} from '../pages/meeting-name/meeting-name';
+import {GroupsPage} from '../pages/groups/groups';
 
 
 @Component({
@@ -29,10 +29,9 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'Hello Ionic', component: HelloIonicPage },
-      { title: 'My First List', component: ListPage },
-      { title: 'Calculator', component:CalculatePage},
-      { title: 'PhoneBook', component:PhoneBookPage}
+      { title: 'Home', component:MeetingNamePage},
+      { title: 'Groups', component:GroupsPage}
+    //  { title: 'PhoneBook', component:PhoneBookPage}
     ];
   }
 

@@ -21324,6 +21324,26 @@ meeting-name .button {
 meeting-name .background {
   background-image: url("../../img/meetings.gif");
   background-repeat: no-repeat;
-  background-size: 400px 600px;
+  background-size: 400px 550px;
   background-position: bottom;
+}
+
+transmission h1 {
+  text-align: center;
+  color: #51a7e8;
+  border-bottom: 1px solid black;
+  padding: 15px;
+}
+
+transmission .receiever_container h3 {
+  padding-top: 20px;
+  color: red;
+}
+
+transmission .receiver ion-list {
+  padding-left: 20px;
+}
+
+transmission ion-toolbar {
+  text-align: center;
 }

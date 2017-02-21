@@ -7,6 +7,8 @@ import { ListPage } from '../pages/list/list';
 import { CalculatePage} from '../pages/calculate/calculate';
 import { PhoneBookPage} from '../pages/phone-book/phone-book';
 import { MeetingNamePage} from '../pages/meeting-name/meeting-name';
+import {TransmissionPage} from '../pages/transmission/transmission';
+import {GroupsPage} from '../pages/groups/groups';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { MeetingNamePage} from '../pages/meeting-name/meeting-name';
     ListPage,
     CalculatePage,
     PhoneBookPage,
-    MeetingNamePage
+    MeetingNamePage,
+    TransmissionPage,
+    GroupsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -29,7 +33,9 @@ import { MeetingNamePage} from '../pages/meeting-name/meeting-name';
     ListPage,
     CalculatePage,
     PhoneBookPage,
-    MeetingNamePage
+    MeetingNamePage,
+    TransmissionPage,
+    GroupsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

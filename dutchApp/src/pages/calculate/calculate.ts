@@ -1,12 +1,15 @@
 import {Component} from '@angular/core';
-import {AlertController} from 'ionic-angular'
+import {AlertController} from 'ionic-angular';
+import {NavController, NavParams} from 'ionic-angular';
+import {PhoneBookPage} from "../phone-book/phone-book";
+import {TransmissionPage} from "../transmission/transmission";
 
 @Component({
   selector:'page-calculate',
   templateUrl:'calculate.html'
 })
 export class CalculatePage{
-  constructor(public alertCtrl: AlertController){
+  constructor(public alertCtrl: AlertController, public navCtrl : NavController, public navParams : NavParams){
 
   }
 
@@ -40,5 +43,11 @@ export class CalculatePage{
       ]
     });
     prompt.present();
+  }
+
+  nextPage(event, item){
+    this.navCtrl.push(TransmissionPage,{
+      item:item
+    });
   }
 }
