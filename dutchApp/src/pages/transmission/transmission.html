@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-navbar>
+
+  </ion-navbar>
+  <ion-title>DutchApp</ion-title>
+</ion-header>
+
+<ion-content padding>
+  <h1><ion-icon name="send"></ion-icon>
+    Transmission</h1>
+
+  <div class="message_container">
+    <h3><ion-icon name="mail">Message</ion-icon></h3>
+    <div class="message">
+      <ion-item>
+        <ion-label>Bank</ion-label>
+        <ion-select [(ngModel)]="bank">
+          <ion-option value="1" selected="true">Kookmin</ion-option>
+          <ion-option value="2">Hana</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>AccountNumber</ion-label>
+        <ion-input type="text" placeholder="AccountNumber"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Owner</ion-label>
+        <ion-input type="text" placeholder="Owner"></ion-input>
+      </ion-item>
+      <ion-list>
+          <ul class="using_content">
+            <li>GS25 Snack : 1,200</li>
+            <li>GS25 Kakao Choco : 3,600</li>
+          </ul>
+      </ion-list>
+    </div>
+  </div>
+  <div class="receiever_container">
+    <h3> <ion-icon name="people">Receiver</ion-icon></h3>
+    <div class="receiver">
+      <ion-list>
+        <ion-checkbox [(ngModel)]="aaa" checked="true"></ion-checkbox>
+        <span class="number">01022221111</span>
+        <br/>
+        <ion-checkbox [(ngModel)]="bbb" checked="true"></ion-checkbox>
+        <span class="number">01022223333</span>
+        <br/>
+        <ion-checkbox [(ngModel)]="bbb" checked="true"></ion-checkbox>
+        <span class="number">01022223333</span>
+        <br/>
+        <ion-checkbox [(ngModel)]="bbb" checked="true"></ion-checkbox>
+        <span class="number">01022223333</span>
+        <br/>
+        <ion-checkbox [(ngModel)]="bbb" checked="true"></ion-checkbox>
+        <span class="number">01022223333</span>
+      </ion-list>
+    </div>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button round>Send</button>
+    <button ion-button round>Copy</button>
+  </ion-toolbar>
+</ion-footer>
+
+

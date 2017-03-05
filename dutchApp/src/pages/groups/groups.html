@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Groups</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list inset>
+    <button ion-item (click)="itemSelected()">
+      <ion-icon name="bonfire" item-left></ion-icon>  FriendsGroup <ion-icon name="mail" item-right></ion-icon>
+    </button>
+    <button ion-item>
+      <ion-icon name="bonfire" item-left></ion-icon> BasketBallTeam <ion-icon name="mail-open" item-right></ion-icon>
+    </button>
+
+  </ion-list>
+</ion-content>

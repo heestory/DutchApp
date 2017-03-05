@@ -1,14 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-
 import { Platform, MenuController, Nav } from 'ionic-angular';
-
 import { StatusBar, Splashscreen } from 'ionic-native';
-
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-import { ListPage } from '../pages/list/list';
-import {CalculatePage} from '../pages/calculate/calculate';
-import {PhoneBookPage} from '../pages/phone-book/phone-book';
 import {MeetingNamePage} from '../pages/meeting-name/meeting-name';
+import {GroupsPage} from '../pages/groups/groups';
+import * as firebase from 'firebase';
 
 
 @Component({
@@ -18,21 +13,36 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
-  rootPage: any = MeetingNamePage;
+  public rootPage: any;
   pages: Array<{title: string, component: any}>;
 
   constructor(
     public platform: Platform,
     public menu: MenuController
   ) {
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDbFrWAL0AAE0ntEtHTvW_hxqZmmWOexmo",
+      authDomain: "dutchapp-b2bfe.firebaseapp.com",
+      databaseURL: "https://dutchapp-b2bfe.firebaseio.com",
+      storageBucket: "dutchapp-b2bfe.appspot.com",
+      messagingSenderId: "301087941085"
+    };
+    firebase.initializeApp(config);
+    firebase.auth().onAuthStateChanged((user) => {
+      if(user){
+        this.rootPage = MeetingNamePage;
+      } else{
+        this.rootPage = GroupsPage;
+      }
+    });
     this.initializeApp();
 
     // set our app's pages
     this.pages = [
-      { title: 'Hello Ionic', component: HelloIonicPage },
-      { title: 'My First List', component: ListPage },
-      { title: 'Calculator', component:CalculatePage},
-      { title: 'PhoneBook', component:PhoneBookPage}
+      { title: 'Home', component:MeetingNamePage},
+      { title: 'Groups', component:GroupsPage}
+    //  { title: 'PhoneBook', component:PhoneBookPage}
     ];
   }
 
